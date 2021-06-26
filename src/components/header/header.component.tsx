@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
-import { FC, ReactElement } from 'react';
+import { auth } from 'firebase/firebase.utils';
 
-// eslint-disable-next-line import/no-unresolved
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import './header.styles.scss';
 
-const Header: FC = (): ReactElement => (
+// type HeaderProps = {
+//   currentUser: any;
+// };
+
+// const Header = ({ currentUser }: HeaderProps) : JSX.Element => (
+const Header = (): JSX.Element => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
