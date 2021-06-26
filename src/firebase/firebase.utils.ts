@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
-import 'firebase/firestore';
+import 'firebase/firestore'; // eslint-disable-line
+import 'firebase/auth'; // eslint-disable-line
 
 const config = {
   apiKey: 'AIzaSyCjqKZCtWBdUtPLI50lXK47sVS2fU-Utto',
@@ -7,9 +8,11 @@ const config = {
   projectId: 'crwn-clothing-db-44ec6',
   storageBucket: 'crwn-clothing-db-44ec6.appspot.com',
   messagingSenderId: '144617975201',
-  appId: '1:144617975201:web:27b7d214cc8e6744252fe0',
-  measurementId: 'G-5QN2V2C6NH',
+  appId: '1:144617975201:web:537a5d3f13a6aa02252fe0',
+  measurementId: 'G-TQF3WDEWSN',
 };
+
+firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
@@ -44,8 +47,6 @@ export const createUserProfileDocument = async (
 
   return userRef;
 };
-
-firebase.initializeApp(config);
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });

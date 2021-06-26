@@ -3,7 +3,7 @@ import SignUp from 'components/sign-up/sign-up.component';
 
 import './sign-in-and-sign-up.styles.scss';
 
-const SignInAndSignUpPage: React.FC = () => (
+const SignInAndSignUpPage = (): JSX.Element => (
   <div className='sign-in-and-sign-up'>
     <SignIn />
     <SignUp />
