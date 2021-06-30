@@ -44,7 +44,7 @@ export default function SignIn(): JSX.Element {
         <FormInput
           type='email'
           name='email'
-          label='email'
+          label='Email'
           value={form.email}
           handleChange={handleChange}
           required
@@ -52,7 +52,7 @@ export default function SignIn(): JSX.Element {
         <FormInput
           type='password'
           name='password'
-          label='password'
+          label='Password'
           value={form.password}
           handleChange={handleChange}
           required

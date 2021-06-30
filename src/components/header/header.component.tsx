@@ -1,16 +1,12 @@
 import { Link } from 'react-router-dom';
-// import { auth } from 'firebase/firebase.utils';
+import { auth } from 'firebase/firebase.utils';
+import { User } from 'models/user';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import './header.styles.scss';
 
-// type HeaderProps = {
-//   currentUser: any;
-// };
-
-// const Header = ({ currentUser }: HeaderProps) : JSX.Element => (
-const Header = (): JSX.Element => (
+const Header = ({ currentUser = null }: User): JSX.Element => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
@@ -22,7 +18,7 @@ const Header = (): JSX.Element => (
       <Link className='option' to='/shop'>
         CONTACT
       </Link>
-      {/* {currentUser ? (
+      {currentUser ? (
         <Link className='option' to='/' onClick={() => auth.signOut()}>
           SIGN OUT
         </Link>
@@ -30,7 +26,7 @@ const Header = (): JSX.Element => (
         <Link className='option' to='/signin'>
           SIGN IN
         </Link>
-      )} */}
+      )}
     </div>
   </div>
 );
